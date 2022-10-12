@@ -1,0 +1,120 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+input {
+    outline: none;
+}
+.main {
+    background-color: #f1f5f9;
+    min-height: 100vh;
+}
+/* sidebar style */
+.side-bar {
+    width: 250px;
+    box-shadow: 0 0 10px #ddd;
+    z-index: 1;
+}
+.side-bar > h3 {
+    font-size: 20px;
+    width: fit-content;
+}
+.side-bar > h3::before {
+    content: '';
+    position: absolute;
+    width: calc(100% + 24px);
+    height: 2px;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -14px;
+}
+.side-bar > h3::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border: 4px solid white;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -22px;
+}
+.side-bar ul {
+    margin-top: 38px;
+}
+.side-bar li a {
+    padding: 10px;
+    display: block;
+    transition: .3s;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.side-bar li i{
+    margin-right: 8px;
+}
+.side-bar ul li a:hover, .side-bar ul li a.active {
+    background-color: #f6f6f6;
+}
+/* END sidebar style */
+.content {
+    width: 100%;
+}
+/* Start header style */
+header .options img {
+    width: 32px;
+    height: 32px;
+    margin-left: 14px;
+}
+header .search-bar::after {
+    font-family: 'Font Awesome 6 Free';
+    position: absolute;
+    content: "\f002";
+    font-weight: 900;
+    color: var(--grey-color);
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+header .search-bar input {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    width: 160px;
+    transition: width 0.3s;
+    padding-left: 26px;
+}
+header .search-bar input:focus {
+    width: 200px;
+}
+header .options span::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: -2px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--red-color);
+}
+header .options:hover {
+    cursor: pointer;
+}
+/* END header style */
