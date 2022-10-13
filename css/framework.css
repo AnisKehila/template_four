@@ -7,19 +7,22 @@
     --grey-color: #888;
 }
 img {
-    width: 100%;
+    max-width: 100%;
 }
 /* List style */
 li {
     list-style: none;
 }
-li a {
+a {
     color: black;
     text-decoration: none;
 }
 /* Margin */
 .mg-auto {
     margin: auto;
+}
+.mg-6{
+    margin: 6px;
 }
 .mg-8 {
     margin: 8px;
@@ -39,7 +42,9 @@ li a {
 .mg-20 {
     margin: 20px;
 }
-
+.mg-r6 {
+    margin-right: 6px;
+}
 .mg-r8 {
     margin-right: 8px;
 }
@@ -58,7 +63,9 @@ li a {
 .mg-r20 {
     margin-right: 20px;
 }
-
+.mg-l6 {
+    margin-left: 6px;
+}
 .mg-l8 {
     margin-left: 8px;
 }
@@ -77,7 +84,9 @@ li a {
 .mg-l20 {
     margin-left: 20px;
 }
-
+.mg-t6 {
+    margin-top: 6px;
+}
 .mg-t8 {
     margin-top: 8px;
 }
@@ -96,7 +105,9 @@ li a {
 .mg-t20 {
     margin-top: 20px;
 }
-
+.mg-b6 {
+    margin-bottom: 6px;
+}
 .mg-b8 {
     margin-bottom: 8px;
 }
@@ -214,9 +225,8 @@ li a {
 /* grid */
 .d-grid {
     display: grid;
-    grid-template-columns: repeat(autofill , min-max(450px , 1fr));
-    gap: 40px;
-    margin: 20px;
+    grid-template-columns: repeat(auto-fill , minmax(450px , 1fr));
+    margin-top: 40px;
 }
 /* flex */
 .d-flex {
@@ -231,10 +241,12 @@ li a {
 .justify-space {
     justify-content: space-between;
 }
+.justify-around {
+    justify-content: space-around;
+}
 .d-flex-space {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 .d-flex-center {
     display: flex;
@@ -262,8 +274,12 @@ li a {
 .bg-green {
     background-color: var(--green-color);
 }
-.bg-orange {
-    background-color: var(--orange-color);
+.bg-eee {
+    background-color: #eee;
+}
+/* block */
+.d-block {
+    display: block;
 }
 /* position */
 .pos-r {
@@ -271,4 +287,58 @@ li a {
 }
 .pos-a {
     position: absolute;
+}
+/* Border radius */
+
+.br-6 {
+    border-radius: 6px;
+}
+.br-8 {
+    border-radius: 8px;
+}
+.circle {
+    border-radius: 50%;
+}
+/* Text Color */
+.c-grey {
+    color: var(--grey-color);
+}
+.c-white {
+    color: white;
+}
+.c-blue {
+    color: var(--blue-color);
+}
+.c-orange {
+    color: var(--orange-color);
+}
+.c-green {
+    color: var(--green-color);
+}
+
+/* font */
+.fs-14 {
+    font-size: 14px;
+}
+.fs-15 {
+    font-size: 15px;
+}
+.fs-18 {
+    font-size: 18px;
+}
+.fs-20 {
+    font-size: 20px;
+}
+.fw-b {
+    font-weight: bold;
+}
+/* txt center */
+.txt-center {
+    text-align: center;
+}
+/* btn */
+.btn {
+    border: none;
+    border-radius: 6px;
+    padding: 4px 12px;
 }
