@@ -371,7 +371,7 @@ main > h1::after {
     border-bottom: 1px solid #eee;
 }
 .dashboard .tasks .task .trash {
-    transition: .3;
+    transition: .3s;
     cursor: pointer;
 }
 .dashboard .tasks .task .trash:hover {
@@ -383,13 +383,215 @@ main > h1::after {
     border-bottom: 1px solid #eee;
 }
 /* END Uploads box style */
+/* Starts projects progress style */
 .projects-progress ul::before {
     content: '';
-    background: var(--blue-color);
+    background-color: var(--blue-color);
     width: 2px;
     height: 100%;
     position: absolute;
-    left: 0;
+    left: 9px;
     top: 0;
 }
+.projects-progress ul li {
+    padding-left: 38px;
+}
+.projects-progress ul li::before,
+.projects-progress ul li::after {
+    content: '';
+    margin-right: 14px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.projects-progress ul li::before {
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    left: 0;
+}
+.projects-progress ul li.done::before {
+    background-color: var(--blue-color);
+}
+.projects-progress ul li.progress::before {
+    background-color: var(--blue-color);
+    animation: breath 1.4s infinite;
+}
+.projects-progress ul li::after {
+    border: 2px solid var(--blue-color);
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+    left: -4px;
+}
+.projects-progress img {
+    opacity: 0.3;
+    width: 140px;
+    right: 0;
+    bottom: 0;
+}
+/* END projects progress style */
+/* Start reminders box style */
+.reminders ul li {
+    padding-left: 52px;
+}
+.reminders ul li::after {
+    content: '';
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 100%;
+}
+.reminders ul li::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.reminders ul li:first-child::before,
+.reminders ul li:first-child::after {
+    background-color: var(--blue-color);
+}
+.reminders ul li:nth-child(2):before,
+.reminders ul li:nth-child(2)::after {
+    background-color: var(--green-color);
+}
+.reminders ul li:nth-child(3):before,
+.reminders ul li:nth-child(3)::after {
+    background-color: var(--orange-color);
+}
+.reminders ul li:nth-child(4):before,
+.reminders ul li:nth-child(4)::after {
+    background-color: var(--red-color);
+}
+/* END reminders box style */
+/* Start last post box style */
+.l-post img {
+    width: 50px;
+}
+.l-post .info,
+.l-post .content {
+    padding-bottom: 22px;
+    border-bottom: 1px solid #eee;
+}
+/* END last post box style */
+/* Start social box style */
+.social div {
+    height: 50px;
+}
+.social i {
+    width: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: .3s;
+}
+.social .info {
+    width: 100%;
+    margin-left: 16px;
+}
+.social .btn-shape {
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    margin-right: 14px;
+}
+.social .twitter {
+    background-color: rgb(29 161 242 / 20%);
+    color: #1da1f2;
+    margin-top: 14px;
+}
+.social .twitter i,
+.social .twitter .btn-shape {
+    background-color: #1da1f2;
+}
+.social .facebook {
+    background-color: rgb(24 119 242 / 20%);
+    color: #1877f2;
+    margin-top: 14px;
+}
+.social .facebook i,
+.social .facebook .btn-shape {
+    background-color: #1877f2;
+}
+
+.social .youtube {
+    background-color: rgb(255 0 0 / 20%);
+    color: #ff0000;
+    margin-top: 14px;
+}
+.social .youtube i,
+.social .youtube .btn-shape {
+    background-color: #ff0000;
+}
+
+.social .linkedin {
+    background-color: rgb(0 119 181 / 20%);
+    color: #0077b5;
+    margin-top: 14px;
+}
+.social .linkedin i,
+.social .linkedin .btn-shape {
+    background-color: #0077b5;
+}
+/* END social box style */
 /* END Dashboard main content style */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Starts animation */
+@keyframes breath {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
