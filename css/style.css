@@ -29,9 +29,19 @@ input,textarea {
     box-shadow: 0 0 10px #ddd;
     z-index: 1;
 }
+@media(max-width: 768px) {
+    .side-bar {
+        width: 85px;
+    }
+}
 .side-bar > h3 {
     font-size: 20px;
     width: fit-content;
+}
+@media(max-width: 768px) {
+    .side-bar > h3 {
+        font-size: 16px;
+    }
 }
 .side-bar > h3::before {
     content: '';
@@ -55,8 +65,18 @@ input,textarea {
     transform: translateX(-50%);
     bottom: -22px;
 }
+@media(max-width: 768px) {
+    .side-bar > h3::before,.side-bar > h3::after {
+        display: none;
+    }
+}
 .side-bar ul {
     margin-top: 38px;
+}
+@media(max-width: 768px) {
+    .side-bar ul {
+        margin-top: 18px;
+    }
 }
 .side-bar li a {
     padding: 10px;
@@ -65,6 +85,11 @@ input,textarea {
     border-radius: 8px;
     font-size: 14px;
     margin-bottom: 8px;
+}
+@media(max-width: 768px) {
+    .side-bar li a span{
+        display: none;
+    }
 }
 .side-bar li i{
     margin-right: 8px;
@@ -156,17 +181,30 @@ main > h1::after {
     margin-top: -34px;
     margin-left: 20px;
 }
+@media (max-width: 768px) {
+    .dashboard .welcome .avatar {
+        margin-left: 0;
+    }
+
+}
 .dashboard .welcome .body {
     border-top: 1px #eee solid;
     border-bottom: 1px #eee solid;
 }
-
+@media (max-width: 768px) {
+    .dashboard .welcome .body {
+        display: block;
+    }
+    .dashboard .welcome .body div{
+        margin: 14px 0;
+    }
+}
 .dashboard .btn {
     transition: .3s;
     display: block;
     width: fit-content !important;
     margin: 10px 10px 10px auto;
-
+    cursor: pointer;
 }
 .dashboard .btn:hover {
     background-color: var(--blue-alt-color);
@@ -187,10 +225,21 @@ main > h1::after {
 /* stats style */
 
 .dashboard .stats .icon i{
-    background-color: rgb(0 117 255 / 20%);
-    padding: 42px 36px ;
+    width: 90px;
     margin-right: 16px;
-
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard .stats .icon i.c-blue{
+    background-color: rgb(0 117 255 / 20%);
+}
+.dashboard .stats .icon i.c-orange{
+    background-color: rgb(245 158 11 / 20%);
+}
+.dashboard .stats .icon i.c-green{
+    background-color: rgb(34 197 94 / 20%);
 }
 .dashboard .stats .bar {
     flex: 1;
@@ -202,29 +251,145 @@ main > h1::after {
 .dashboard .stats .bar .progress {
     width: 100%;
     height: 4px;
+}
+.dashboard .stats .bar .progress.blue {
     background-color: rgba(0,119,255,60%);
 }
+.dashboard .stats .bar .progress.orange {
+    background-color: rgba(245 158 11 / 20%);
+}
+.dashboard .stats .bar .progress.green {
+    background-color: rgba(34 197 94 / 20%);
+}
+
 .dashboard .stats .bar .money {
     width: 80%;
     height: 4px;
-    background-color: var(--blue-color);
 }
+.dashboard .stats .bar .projects {
+    width: 55%;
+    height: 4px;
+}
+.dashboard .stats .bar .team {
+    width: 75%;
+    height: 4px;
+}
+
 .dashboard .stats .bar .box {
-    left: calc(80% - 16px);
-    top: -38px;
     padding: 3px 4px;
     font-size: 14px;
     border-radius: 4px;
+}
+.dashboard .stats .bar .box.bg-blue {
+    left: calc(80% - 16px);
+    top: -36px;
+}
+.dashboard .stats .bar .box.bg-orange {
+    left: calc(55% - 16px);
+    top: -36px;
+}
+.dashboard .stats .bar .box.bg-green {
+    left: calc(75% - 16px);
+    top: -36px;
 }
 .dashboard .stats .bar .box::after {
     content: '';
     position: absolute;
     left: 8px;
-    top: 25px;
+    top: 22px;
     border: 8px solid;
-    border-color: var(--blue-color) transparent transparent transparent;
-    
 }
-
+.dashboard .stats .bar .bg-blue::after {
+    border-color: var(--blue-color) transparent transparent transparent;
+}
+.dashboard .stats .bar .bg-orange::after {
+    border-color: var(--orange-color) transparent transparent transparent;
+}
+.dashboard .stats .bar .bg-green::after {
+    border-color: var(--green-color) transparent transparent transparent;
+}
 /* END stats style */
+/* Tickets Stats */
+.dashboard .tickets .boxes {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.dashboard .tickets .boxes .box {
+    width: calc(50% - 10px);
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 18px 0;
+    justify-content: space-around;
+    height: 142px;
+}
+@media(max-width: 768px) {
+    .dashboard .tickets .boxes .box {
+        width: 100%;
+    }
+}
+/* END Tickets Stats */
+/* Starts News box  style*/
+.dashboard .news img{
+    width: 100px;
+    margin-right: 12px;
+    border-radius: 8px;
+}
+.dashboard .news .row {
+    padding: 20px 0;
+}
+@media (max-width: 768px) {
+    .dashboard .news .row,
+    .dashboard .news .content {
+        text-align: center;
+        flex-direction: column;
+    }
+    .dashboard .news .content span:first-child {
+        margin: 8px 0;
+    }
+    .dashboard .news .content span:last-child {
+        margin-bottom: 8px;
+    }
+}
+.dashboard .news .row:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+/* END News box  style*/
+/* Start tasks box style */
+.dashboard .tasks .task {
+    padding: 14px 0;
+}
+.dashboard .tasks .deleted div{
+    text-decoration: line-through;
+}
+.dashboard .tasks .task.deleted{
+    opacity: 0.6;
+}
+.dashboard .tasks .task:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.dashboard .tasks .task .trash {
+    transition: .3;
+    cursor: pointer;
+}
+.dashboard .tasks .task .trash:hover {
+    color: var(--red-color);
+}
+/* END tasks box style */
+/* Starts Uploads box style */
+.uploads .row:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+/* END Uploads box style */
+.projects-progress ul::before {
+    content: '';
+    background: var(--blue-color);
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 /* END Dashboard main content style */
