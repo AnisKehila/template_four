@@ -379,12 +379,12 @@ main > h1::after {
 }
 /* END tasks box style */
 /* Starts Uploads box style */
-.uploads .row:not(:last-child) {
+.dashboard .uploads .row:not(:last-child) {
     border-bottom: 1px solid #eee;
 }
 /* END Uploads box style */
 /* Starts projects progress style */
-.projects-progress ul::before {
+.dashboard .projects-progress ul::before {
     content: '';
     background-color: var(--blue-color);
     width: 2px;
@@ -393,11 +393,11 @@ main > h1::after {
     left: 9px;
     top: 0;
 }
-.projects-progress ul li {
+.dashboard .projects-progress ul li {
     padding-left: 38px;
 }
-.projects-progress ul li::before,
-.projects-progress ul li::after {
+.dashboard .projects-progress ul li::before,
+.dashboard .projects-progress ul li::after {
     content: '';
     margin-right: 14px;
     border-radius: 50%;
@@ -405,16 +405,16 @@ main > h1::after {
     top: 50%;
     transform: translateY(-50%);
 }
-.projects-progress ul li::before {
+.dashboard .projects-progress ul li::before {
     width: 20px;
     height: 20px;
     z-index: 2;
     left: 0;
 }
-.projects-progress ul li.done::before {
+.dashboard .projects-progress ul li.done::before {
     background-color: var(--blue-color);
 }
-.projects-progress ul li.progress::before {
+.dashboard .projects-progress ul li.progress::before {
     background-color: var(--blue-color);
     animation: breath 1.4s infinite;
 }
@@ -426,7 +426,7 @@ main > h1::after {
     z-index: 1;
     left: -4px;
 }
-.projects-progress img {
+.dashboard .projects-progress img {
     opacity: 0.3;
     width: 140px;
     right: 0;
@@ -434,10 +434,10 @@ main > h1::after {
 }
 /* END projects progress style */
 /* Start reminders box style */
-.reminders ul li {
+.dashboard .reminders ul li {
     padding-left: 52px;
 }
-.reminders ul li::after {
+.dashboard .reminders ul li::after {
     content: '';
     position: absolute;
     left: 32px;
@@ -446,7 +446,7 @@ main > h1::after {
     width: 2px;
     height: 100%;
 }
-.reminders ul li::before {
+.dashboard .reminders ul li::before {
     content: '';
     position: absolute;
     left: 3px;
@@ -456,38 +456,38 @@ main > h1::after {
     height: 15px;
     border-radius: 50%;
 }
-.reminders ul li:first-child::before,
-.reminders ul li:first-child::after {
+.dashboard .reminders ul li:first-child::before,
+.dashboard .reminders ul li:first-child::after {
     background-color: var(--blue-color);
 }
-.reminders ul li:nth-child(2):before,
-.reminders ul li:nth-child(2)::after {
+.dashboard .reminders ul li:nth-child(2):before,
+.dashboard .reminders ul li:nth-child(2)::after {
     background-color: var(--green-color);
 }
-.reminders ul li:nth-child(3):before,
-.reminders ul li:nth-child(3)::after {
+.dashboard .reminders ul li:nth-child(3):before,
+.dashboard .reminders ul li:nth-child(3)::after {
     background-color: var(--orange-color);
 }
-.reminders ul li:nth-child(4):before,
-.reminders ul li:nth-child(4)::after {
+.dashboard .reminders ul li:nth-child(4):before,
+.dashboard .reminders ul li:nth-child(4)::after {
     background-color: var(--red-color);
 }
 /* END reminders box style */
 /* Start last post box style */
-.l-post img {
+.dashboard .l-post img {
     width: 50px;
 }
-.l-post .info,
-.l-post .content {
+.dashboard .l-post .info,
+.dashboard .l-post .content {
     padding-bottom: 22px;
     border-bottom: 1px solid #eee;
 }
 /* END last post box style */
 /* Start social box style */
-.social div {
+.dashboard .social div {
     height: 50px;
 }
-.social i {
+.dashboard .social i {
     width: 57px;
     display: flex;
     align-items: center;
@@ -495,55 +495,102 @@ main > h1::after {
     height: 100%;
     transition: .3s;
 }
-.social .info {
+.dashboard .social i:hover {
+    rotate: 5deg;
+}
+.dashboard .social .info {
     width: 100%;
     margin-left: 16px;
 }
-.social .btn-shape {
+.dashboard .social .btn-shape {
     cursor: pointer;
     color: white;
     font-size: 14px;
     margin-right: 14px;
 }
-.social .twitter {
+.dashboard .social .twitter {
     background-color: rgb(29 161 242 / 20%);
     color: #1da1f2;
     margin-top: 14px;
 }
-.social .twitter i,
-.social .twitter .btn-shape {
+.dashboard .social .twitter i,
+.dashboard .social .twitter .btn-shape {
     background-color: #1da1f2;
 }
-.social .facebook {
+.dashboard .social .facebook {
     background-color: rgb(24 119 242 / 20%);
     color: #1877f2;
     margin-top: 14px;
 }
-.social .facebook i,
-.social .facebook .btn-shape {
+.dashboard .social .facebook i,
+.dashboard .social .facebook .btn-shape {
     background-color: #1877f2;
 }
 
-.social .youtube {
-    background-color: rgb(255 0 0 / 20%);
+.dashboard .social .youtube {
+background-color: rgb(255 0 0 / 20%);
     color: #ff0000;
     margin-top: 14px;
 }
-.social .youtube i,
-.social .youtube .btn-shape {
+.dashboard .social .youtube i,
+.dashboard .social .youtube .btn-shape {
     background-color: #ff0000;
 }
 
-.social .linkedin {
+.dashboard .social .linkedin {
     background-color: rgb(0 119 181 / 20%);
     color: #0077b5;
     margin-top: 14px;
 }
-.social .linkedin i,
-.social .linkedin .btn-shape {
+.dashboard .social .linkedin i,
+.dashboard .social .linkedin .btn-shape {
     background-color: #0077b5;
 }
 /* END social box style */
+/* Starts projects table style */
+.dashboard .projects-table {
+    width: calc(100vw - 265px);
+}
+@media (max-width: 1175px) {
+    .dashboard .projects-table {
+        width: 100%;
+    }
+}
+.dashboard .projects-table .table {
+    overflow-x: auto;
+}
+.dashboard .projects-table table {
+    min-width: 1000px;
+    width: 100%;
+    border-spacing: 0;
+}
+.dashboard .projects-table table th,
+.dashboard .projects-table table td {
+    padding: 15px;
+}
+.dashboard .projects-table table th {
+    text-align: left;
+    background-color: #eee;
+}
+.dashboard .projects-table table td {
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    transition: .3s;
+}
+.dashboard .projects-table table td:last-child {
+    border-right: 1px solid #eee;
+}
+.dashboard .projects-table table td img {
+    width: 38px;
+    border-radius: 50%;
+    margin-right: -22px;
+    border: 2px solid white;
+}
+.dashboard .projects-table table tr:hover td {
+    background-color: #faf7f7;
+}
+
+/* END projects table style */
 /* END Dashboard main content style */
 
 
