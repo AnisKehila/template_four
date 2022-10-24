@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/framework.css">
+    <!-- Font awsome library -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
+    <title>Settings | Anis</title>
+</head>
+<body>
+    <div class="main d-flex">
+        <div class="side-bar bg-white pd-20">
+            <h3 class="pos-r mg-auto">Anis</h3>
+            <ul>
+                <li><a href="index.html"><i class="fa-regular fa-chart-bar fa-fw"></i><span>Dashboard</span></a></li>
+                <li><a href="settings.html" class="active"><i class="fa-solid fa-gear fa-fw"></i><span>Settings</span></a></li>
+                <li><a href="profile.html"><i class="fa-regular fa-user fa-fw"></i><span>Profile</span></a></li>
+                <li><a href="projects.html"><i class="fa-solid fa-diagram-project fa-fw"></i><span>Projects</span></a></li>
+                <li><a href="courses.html"><i class="fa-solid fa-graduation-cap fa-fw"></i><span>Courses</span></a></li>
+                <li><a href="freinds.html"><i class="fa-regular fa-circle-user fa-fw"></i><span>Freinds</span></a></li>
+                <li><a href="files.html"><i class="fa-regular fa-file fa-fw"></i><span>Files</span></a></li>
+                <li><a href="plans.html"><i class="fa-regular fa-credit-card fa-fw"></i><span>Plans</span></a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <header class="d-flex-space pd-18 bg-white">
+                <div class="search-bar pos-r">
+                    <input type="search" placeholder="Type A Keyword">
+                </div>
+                <div class="options d-flex-center">
+                    <span class="pos-r"><i class="fa-regular fa-bell fa-lg"></i></span>
+                    <img src="imgs/avatar.png" alt="" >
+                </div>
+            </header>
+            <main class="mg-14 settings">
+                <h1 class="pos-r mg-b8">Settings</h1>
+                <!-- Grid boxes -->
+                <div class="d-grid gap-20 w-full">
+                    <!-- Site control -->
+                    <div class="br-8 bg-white pd-18 control">
+                        <h2>Site Control</h2>
+                        <p class="fs-15 c-grey mg-t12 mg-b20">Control The Website If There Is Maintenance</p>
+                        <div class="d-flex-space align">
+                            <div>
+                                <p>Website Control</p>
+                                <p class="fs-15 c-grey mg-t6">Open/Close Website And Type The Reason</p>
+                            </div>
+                            <div class="switch-btn"></div>
+                        </div>
+                        <textarea placeholder="Close Message Content" class="mg-t20 br-6 pd-l18 pd-t10"></textarea>
+                    </div>
+                    <!-- General info -->
+                    <div class="br-8 bg-white pd-18 g-info">
+                        <h2>General Info</h2>
+                        <p class="fs-15 c-grey mg-t12 mg-b20">General Information About Your Account</p>
+                        <div class="mg-b14">
+                            <label for="first-name" class="c-grey fs-15 ">First Name</label>
+                            <input type="text" placeholder="First Name">
+                        </div>
+                        <div class="mg-b14">
+                            <label for="last-name" class="c-grey fs-15 ">Last Name</label>
+                            <input type="text" placeholder="Last Name">
+                        </div>
+                        <div class="mg-b14">
+                            <label for="first-name" class="c-grey fs-15 ">Email</label>
+                            <input type="text" placeholder="Email" value="aniskehila22@gmail.com" class="email" disabled>
+                            <a href="#" class="c-blue">Change</a>
+                        </div>
+                    </div>
+                    <!-- Security info -->
+                    <div class="br-8 bg-white pd-18 security">
+                        <h2>Security Info</h2>
+                        <p class="fs-15 c-grey mg-t12 mg-b20">Security Information About Your Account</p>
+
+                    </div>
+                    <!-- Social info -->
+                    <div class="br-8 bg-white pd-18 social">
+                    </div>
+                    <!-- Widgets Control -->
+                    <div class="br-8 bg-white pd-18 c-widgets">
+                    </div>
+                    <!-- Backup -->
+                    <div class="br-8 bg-white pd-18 backup">
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
