@@ -247,6 +247,9 @@ a {
 .d-flex {
     display: flex;
 }
+.rev {
+    flex-direction: row-reverse;
+}
 .col {
     flex-direction: column;
 }

@@ -28,6 +28,7 @@ input,textarea {
     width: 250px;
     box-shadow: 0 0 10px #ddd;
     z-index: 1;
+    transition: .4s;
 }
 @media(max-width: 768px) {
     .side-bar {
@@ -629,7 +630,7 @@ background-color: rgb(255 0 0 / 20%);
 }
 .settings .switch-btn.active::before {
     content: "\f00c";
-    left: 44px;
+    left: calc(100% - 30px);
     color: var(--blue-color);
 }
 .settings .control textarea {
@@ -663,6 +664,148 @@ background-color: rgb(255 0 0 / 20%);
     border-bottom: 1px solid #eee;
 }
 /* END General info box style */
+/* Start Social Media box style */
+.settings .social input {
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    height: 40px;
+    border-radius: 0 6px 6px 0;
+    width: 100%;
+    padding-left: 12px;
+}
+.settings .social i {
+    background-color: #f6f6f6;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-radius: 6px 0 0 6px;
+    transition: .2s;
+}
+.settings .social input:focus + i {
+    color: black;
+}
+/* END Social Media box style */
+
+/* Start Widgets control box style */
+.settings .c-widgets label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 26px;
+    display: block;
+    width: fit-content;
+}
+
+.settings .c-widgets label::before,
+.settings .c-widgets label::after {
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.settings .c-widgets label::before {
+    content: '';
+    border: 2px solid var(--grey-color);
+    width: 14px;
+    height: 14px;
+}
+.settings .c-widgets label:hover::before {
+    border-color: var(--blue-alt-color);
+}
+.settings .c-widgets label::after {
+    content: "\f00c";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    width: 18px;
+    height: 18px;
+    color: white;
+    background-color: var(--blue-color);
+    transform: scale(0) rotate(360deg);
+    transition: .3s;
+    margin-top: -9px;
+}
+.settings .c-widgets input[type = "checkbox"] {
+    display: none;
+}
+.settings .c-widgets input[type = "checkbox"]:checked + label::after {
+    transform: scale(1);
+}
+/* END Widgets control box style */
+/* Start Backup box style */
+.settings .backup .radios{
+    border-bottom: 1px solid #eee;
+}
+
+.settings .backup .radios label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 26px;
+    display: block;
+    width: fit-content;
+}
+.settings .backup .radios input[type = "radio"] {
+    display: none;
+}
+.settings .backup .radios label::before,
+.settings .backup .radios label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.settings .backup .radios label::before {
+    width: 18px;
+    left: 0;
+    height: 18px;
+    border: 2px solid var(--grey-color);
+    border-radius: 50%;
+    transition: .3s;
+}
+.settings .backup .radios label::after {
+    background-color: var(--blue-color);
+    left: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transition: .3s;
+    transform: scale(0);
+    margin-top: -6px;
+}
+.settings .backup .radios input[type = "radio"]:checked + label:before {
+    border: 2px solid var(--blue-color);
+}
+.settings .backup .radios input[type = "radio"]:checked + label:after {
+    transform: scale(1);
+}
+.settings .backup .cards label {
+    min-width: 136px;
+    cursor: pointer;
+    padding: 20px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+}
+.settings .backup .cards input[type= "radio"] {
+    display: none;
+}
+.settings .backup .cards input[type= "radio"]:checked + label {
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+}
+/* END Backup box style */
+
 /* END settings main content style */
 
 
