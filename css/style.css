@@ -488,7 +488,8 @@ main > h1::after {
     height: 50px;
 }
 .dashboard .social i {
-    width: 57px;
+    min-width: 52px;
+    max-width: 52px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -496,6 +497,7 @@ main > h1::after {
     transition: .3s;
 }
 .dashboard .social i:hover {
+    transform: rotate(5deg);
     rotate: 5deg;
 }
 .dashboard .social .info {
@@ -657,6 +659,9 @@ background-color: rgb(255 0 0 / 20%);
     background-color: #f0f4f8;
     color: #bbb;
 }
+.settings .security > div:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
 /* END General info box style */
 /* END settings main content style */
 
@@ -673,39 +678,12 @@ background-color: rgb(255 0 0 / 20%);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Starts animation */
 @keyframes breath {
-    0% {
+    0%,100% {
         opacity: 0;
     }
     50% {
         opacity: 1;
-    }
-    100% {
-        opacity: 0;
     }
 }

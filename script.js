@@ -6,5 +6,7 @@ function toggleClass() {
     }
 }
 // toggle button
-let btn = document.querySelector('.switch-btn');
-btn.addEventListener('click' , toggleClass);
+let toggleBtns = document.querySelectorAll('.switch-btn');
+toggleBtns.forEach(e => {
+    e.addEventListener('click' , toggleClass);
+})
