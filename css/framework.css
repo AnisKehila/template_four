@@ -330,6 +330,9 @@ a {
 .c-white {
     color: white;
 }
+.c-black {
+    color: black;
+}
 .c-blue {
     color: var(--blue-color);
 }
