@@ -417,4 +417,8 @@ a {
     .txt-small-center {
         text-align: center;
     }
+    .respo {
+        flex-direction: column;
+        text-align: center;
+    }
 }

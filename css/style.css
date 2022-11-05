@@ -6,6 +6,18 @@
     --red-color: #f44336;
     --grey-color: #888;
 }
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-alt-color);
+}
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -499,7 +511,6 @@ main > h1::after {
 }
 .dashboard .social i:hover {
     transform: rotate(5deg);
-    rotate: 5deg;
 }
 .dashboard .social .info {
     width: 100%;
@@ -811,13 +822,32 @@ background-color: rgb(255 0 0 / 20%);
 }
 /* END Backup box style */
 /* Start Profile box style */
+@media (max-width: 690px) {
+    .profile .card {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
 .profile .card img {
     width: 128px;
     height: 128px;
+    margin: auto;
 }
 .profile .card .profile-info {
     width: 300px;
-    border-right: 1px solid #eee;
+    min-height: 260px;
+    margin: auto;
+}
+@media (max-width: 400px) {
+    .profile .card img {
+        width: 90px;
+        height: 90px;
+    }
+    .profile .card .profile-info {
+        width: fit-content;
+    }
 }
 .profile .card .profile-info .progress-bar {
     width: 150px;
@@ -837,14 +867,84 @@ background-color: rgb(255 0 0 / 20%);
 .profile .card .settings {
     width: 100%;
 }
-
+.profile .card .settings li {
+    border-bottom: 1px solid #eee;
+    transition: .3s;
+}
+.profile .card .settings li:hover {
+    background-color: #f9f9f9;
+}
 .profile .card .settings li > div {
-    justify-content: space-between;
     flex-wrap: wrap;
 }
-
+@media (max-width: 964px) {
+    .profile .card .settings li > div {
+        flex-direction: column;
+        align-items: baseline;
+    }
+}
+@media (max-width: 690px) {
+    .profile .card .settings li > div {
+        align-items: center;
+    }
+}
+.profile .card .settings li > div p {
+    min-width: 250px;
+    padding: 10px 0;
+}
+@media (max-width: 400px) {
+    .profile .card .settings li > div p {
+        min-width: fit-content;
+        padding: 8px 0;
+    }
+}
+.profile .switch-btn {
+    height: 20px;
+}
+.profile .switch-btn::before {
+    width: 13px;
+    height: 13px;
+    font-size: 12px;
+}
+.profile .switch-btn.active::before {
+    left: calc(100% - 18px);
+}
+.profile .card ul::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 80%;
+    background-color: #eee;
+}
 /* END Profile box style */
-
+/* Start Skills Box Style */
+.profile .skills ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+    padding: 16px 0 ;
+}
+.profile .skills {
+    flex-basis: 32%;
+}
+/* END Skills Box Style */
+/* Start activities box style */
+.profile .activities {
+    flex-basis: 68%;
+}
+.profile .activities img {
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+}
+.profile .activities ul li {
+    padding: 20px 0;
+} 
+.profile .activities ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+} 
+/* END activities box style */
 /* END settings main content style */
 
 

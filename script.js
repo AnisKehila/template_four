@@ -3,7 +3,7 @@ function toggleClass() {
 }
 function closeSideBar(sideBar) {
     sideBar.style = `
-        margin-left: -13%; 
+        margin-left: -85px; 
     `;
 }
 function showSideBar(sideBar) {
