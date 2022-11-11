@@ -231,7 +231,12 @@ a {
 .d-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill , minmax(450px , 1fr));
-    margin-top: 40px;
+    margin-top: 50px;
+}
+.d-grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    margin-top: 50px;
 }
 @media (max-width: 600px) {
     .d-grid {

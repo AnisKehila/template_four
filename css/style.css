@@ -1006,7 +1006,33 @@ background-color: rgb(255 0 0 / 20%);
 }
 /* END cards style */
 /* END Projects main content style */
-
+/* Starts Courses main content style */
+.courses img:first-child {
+    width: 100%;
+}
+.courses .card {
+    overflow: hidden;
+}
+.courses .card .txt {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 40px;
+    line-height: 1.6;
+}
+.courses .card .txt span {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.courses .card img:nth-child(2) {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px white solid;
+    left: 22px;
+    top: 18px;
+}
+/* END Courses main content style */
 
 
 
