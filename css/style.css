@@ -12,6 +12,7 @@
 ::-webkit-scrollbar-track {
     background-color: white;
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: var(--blue-color);
 }
@@ -167,7 +168,7 @@ main > h1::before {
     position: absolute;
     bottom: -12px;
     left: -1px;
-    width: 70%;
+    width: 115px;
     height: 3px;
     background-color: white;
 }
@@ -176,7 +177,7 @@ main > h1::after {
     position: absolute;
     bottom: -12px;
     left: -1px;
-    width: 30%;
+    width: 42px;
     height: 3px;
     background-color: black;
 }
@@ -947,6 +948,64 @@ background-color: rgb(255 0 0 / 20%);
 /* END activities box style */
 /* END settings main content style */
 
+/* START Projects main content style */
+/* Start cards style */
+.projects .date {
+    right: 10px;
+    top: 10px;
+}
+.projects .profiles a img {
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+}
+.projects .profiles a:nth-child(2) {
+    left: 24px;
+}
+.projects .profiles a:nth-child(3) {
+    left: calc(24px * 2);
+}
+.projects .profiles a:nth-child(4) {
+    left: calc(24px * 3);
+}
+.projects .profiles a:nth-child(5) {
+    left: calc(24px * 4);
+}
+.projects .profiles a:hover{
+    z-index: 10;
+}
+.projects .profiles a {
+    top: 0%;
+    transform: translateY(-17%);
+}
+.projects .profiles {
+    border-bottom: 1px solid #eee;
+    margin-top: 48px;
+    padding-bottom: 28px;
+}
+.projects .skills {
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 16px 0;
+    border-bottom: 1px solid #eee;
+}
+.projects .skill-bar {
+    width: 250px;
+    height: 8px;
+}
+.projects .progress {
+    height: 100%;
+}
+@media(max-width: 768px) {
+    .projects .align {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+/* END cards style */
+/* END Projects main content style */
 
 
 

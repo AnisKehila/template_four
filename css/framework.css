@@ -346,6 +346,9 @@ a {
     color: var(--red-color);
 }
 /* font */
+.fs-12 {
+    font-size: 12px;
+}
 .fs-14 {
     font-size: 14px;
 }
@@ -364,9 +367,12 @@ a {
 .fw-b {
     font-weight: bold;
 }
-/* txt center */
+/* txt */
 .txt-center {
     text-align: center;
+}
+.txt-end {
+    text-align: end;
 }
 /* btn */
 .btn-shape {
