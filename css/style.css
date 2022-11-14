@@ -1033,6 +1033,50 @@ background-color: rgb(255 0 0 / 20%);
     top: 18px;
 }
 /* END Courses main content style */
+/* START Freinds main content style */
+.freinds .card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.freinds .card .header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 16px;
+    margin-top: 20px;
+}
+.freinds .card > div:last-child {
+    border-top: 1px solid #eee;
+    margin-top: 18px;
+}
+.freinds .contact {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+.freinds .contact i {
+    background-color: #eee;
+    color: #666;
+    border-radius: 50%;
+    font-size: 13px;
+    padding: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+.freinds .contact i:hover {
+    background-color: var(--blue-color);
+    color: white;
+}
+.freinds .vip {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: var(--orange-color);
+    opacity: 0.2;
+}
+
+/* END Courses main content style */
 
 
 
